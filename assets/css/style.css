@@ -237,3 +237,75 @@ a{
     padding: 10px;
     text-decoration: none;
 }
+/* select product page css */
+
+h2.product-name{
+    margin-top: 20px;
+    font-size: 28px;
+}
+
+.selectProduct{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+p.product-detail{
+    padding-top: 69px;
+}
+.selectProduct .card,
+.selectProduct .card img{
+    border-radius: 15px;
+}
+.seller-detail.card{
+    padding: 20px;
+}
+.seller-detail{
+    text-align: center;
+    margin-top: 70px;
+}
+.seller-detail .userimage{
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    position: relative;
+    margin: auto;
+    margin-bottom: 20px;
+}
+.seller-detail .userimage img{
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+.seller-name{
+    font-size: 18px;
+}
+.seller-detail .listing {
+    padding: 10px 0;
+    font-size: 21px;
+}
+form {
+    margin: 60px 0;
+    width: 40%;
+}
+.send-message .input-group{
+    height: 70px;
+    width: 100%;
+}
+.send-message .input-group input{
+    border: 1px solid #ffc107;
+    border-radius: 15px;
+}
+.input-group:not(.has-validation)>.dropdown-toggle:nth-last-child(n+3), 
+.input-group:not(.has-validation)>:not(:last-child):not(.dropdown-toggle):not(.dropdown-menu){
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+.input-group-addon{
+    position: absolute;
+    right: 0;
+    height: 100%;
+}
+.input-group-addon button{
+    height: 100%;
+    width: 80px;
+    border-bottom-left-radius: 70px;
+}
