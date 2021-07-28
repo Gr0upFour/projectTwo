@@ -8,10 +8,10 @@ header{
     background-color: white;
 }
 
-main{
+/* main{
     background-image: url('../css/images/Overlay.png');
     background-size: cover;
-}
+} */
 
 .logo{
     width: 80%;
@@ -133,14 +133,14 @@ main{
 
 .btn{
     background-color: grey;
-    color:#ffe3a0;
+    color:#fec008;
     border-radius: 8px;
     border: none; 
     transform: translate(.8s);
 }
 
 .btn:hover{
-    background-color: #ffe3a0;
+    background-color: #fec008;
     color:grey;
     font-weight: bolder;
 }
@@ -167,10 +167,17 @@ main{
 
 .sign-in{
    display: flex;
-   justify-content: flex-end;
+   justify-content: center;
     margin-top: 50px;
-    margin-bottom: 50px;
+    margin-bottom: 80px;
 }
+
+.registration{
+ margin-top: 50px;
+ padding-right: 30px;
+    
+}
+
 
 form{
     border: 1px solid grey;
@@ -179,9 +186,9 @@ form{
 }
 
 .inputs{
-    padding-bottom: 30px;
-    padding-left: 50px;
+    margin-bottom: 30px;
     padding-right: 50px;
+    width: 400px; 
 }
 
 .search{
@@ -189,4 +196,9 @@ form{
     border-radius: 2%;
     border: none;
     background-color: red;
+}
+
+a{
+    text-decoration: none;
+    color:#fec008;
 }
