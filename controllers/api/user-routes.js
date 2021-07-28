@@ -4,7 +4,7 @@ const { User } = require('../../models');
 //GET /api/users
 router.get('/', (req, res) => {
     User.findAll({
-        attributes: {exlude: ['password']}
+        attributes: { exlude: ['password'] }
     })
         .then(dbUserData => res.json(dbUserData))
         .catch(error => {
@@ -16,13 +16,13 @@ router.get('/', (req, res) => {
 //GET /api/users/:id
 router.get('/:id', (req, res) => {
     User.findOne({
-        attributes: {exlude: ['password']},
+        attributes: { exlude: ['password'] },
         where: {
             id: req.params.id
         }
     })
         .then(dbUserData => {
-            if(!dbUserData) {
+            if (!dbUserData) {
                 res.status(404).json({ message: 'No user found with this id.' });
                 return;
             }
@@ -41,7 +41,14 @@ router.post('/', (req, res) => {
         email: req.body.email,
         password: req.body.password
     })
-        .then(dbUserData => res.json(dbUserData))
+        .then(dbUserData => {
+            req.session.saved(() => {
+                req.session.user_id = dbUserData.id;
+                req.session.username = dbUserData.username;
+                req.session.loggedIn = true;
+                res.json(dbUserData);
+            });
+        })
         .catch(error => {
             console.log(error);
             res.status(500).json(error);
@@ -62,17 +69,29 @@ router.post('/login', (req, res) => {
 
         //verify user password
         const validPassword = dbUserData.checkPassword(req.body.password);
-        if(!validPassword) {
+        if (!validPassword) {
             res.status(400).json({ message: 'Incorrect password entered' });
             return;
         }
-        res.json({ user: dbUserData, message: 'Successfully logged in.' });
+        req.session.saved(() => {
+            req.session.user_id = dbUserData.id;
+            req.session.username = dbUserData.username;
+            req.session.loggedIn = true;
+            res.json({ user: dbUserData, message: 'Successfully logged in.' });
+        })
     })
 });
 
 //POST /api/users/logout
 router.post('/logout', (req, res) => {
-
+    if (req.session.loggedIn) {
+        req.session.destroy(() => {
+            res.status(204).end();
+        });
+    }
+    else {
+        res.status(404).end();
+    }
 });
 
 //PUT /api/users/:id
@@ -84,7 +103,7 @@ router.put('/:id', (req, res) => {
         }
     })
         .then(dbUserData => {
-            if(!dbUserData[0]) {
+            if (!dbUserData[0]) {
                 res.status(404).json({ message: 'No user found with this id.' });
                 return;
             }
@@ -104,7 +123,7 @@ router.delete('/:id', (req, res) => {
         }
     })
         .then(dbUserData => {
-            if(!dbUserData) {
+            if (!dbUserData) {
                 res.status(404).json({ message: 'No user found with this id.' });
                 return;
             }
