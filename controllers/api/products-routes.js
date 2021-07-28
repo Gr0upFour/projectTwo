@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { Product, User } = require('../../models');
+const withAuth = require('../../utils/auth');
 
 //GET all product posts, sorted by newest first
 router.get('/', (req, res) => {
@@ -48,7 +49,7 @@ router.get('/:id', (req, res) => {
 });
 
 //POST a new product listing
-router.post('/', (req, res) => {
+router.post('/', withAuth, (req, res) => {
     Product.create({
         product_name: req.body.product_name,
         descrip: req.body.descrip,
@@ -65,7 +66,7 @@ router.post('/', (req, res) => {
 });
 
 //PUT a new title, description, or price for existing listing
-router.put('/:id', (req, res) => {
+router.put('/:id', withAuth, (req, res) => {
     Product.update(
         {
             product_name: req.body.product_name,
@@ -92,7 +93,7 @@ router.put('/:id', (req, res) => {
 });
 
 //DELETE a product listing
-router.delete('/:id', (req, res) => {
+router.delete('/:id', withAuth, (req, res) => {
     Product.destroy(
         {
             where: {
