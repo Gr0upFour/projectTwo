@@ -183,7 +183,7 @@ header{
 
 }
 
-form{
+.form{
     border: 1px solid grey;
     padding: 20px;
     border-radius: 12%;
@@ -205,4 +205,35 @@ form{
 a{
     text-decoration: none;
     color:#fec008;
+}
+
+.post{
+    color: #465a64;
+}
+
+.add-description{
+    display: flex;
+    justify-content: center;
+    /* flex-direction: column; */
+}
+
+.ad-inputs{
+    border: 1px solid grey; 
+    border-radius: 8px 8px;
+    width: 400px;
+    line-height: 30px;
+    margin-bottom: 15px;
+}
+
+.description{
+    line-height: 100px;
+}
+
+.post-ad{
+    border: none;
+    background-color: #465a64;
+    color: #fec008;
+    border-radius: 8px 8px;
+    padding: 10px;
+    text-decoration: none;
 }

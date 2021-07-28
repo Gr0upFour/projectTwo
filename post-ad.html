@@ -11,10 +11,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+SC:wght@500&family=Teko:wght@300&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>Sign In - Window Shopper</title>
+    <title>Post Ad - Window Shopper</title>
 </head>
 <body>
-    <header >
+    <header>
         <nav>
             <div class="row">
                 <div class="col-4">
@@ -31,11 +31,11 @@
                 </div>
                 <div class="col-4 ">
                    <button class="link-item">
-                       <a href="sign-in.html">Log In</a>
+                       <a href="#">Inbox</a>
                    </button>
-                   <h7>or</h7>
+                   
                    <button class="link-item">
-                       <a href="register.html">Register</a>
+                       <a href="#">Logout</a>
                    </button>
                 </div>
             </div>
@@ -69,45 +69,56 @@
                         </li>
                     </ul>
                 </div>
-                
             </div>
         </nav>
     </header>
-
     <main>
         <div class="container">
             <div class="row">
-                <div class="col-4 ">
-                    <form class="registration">
-                        <h5>Not Registered Yet?</h5>
-                        <p>Register now to post, edit and manage ads. It's quick, easy and free!</p>
-                        
-                            <button type="submit" class="btn">
-                                <a href="register.html">
-                                    Register Now
-                                </a>
-                            </button>
-                      </form>
-                </div>
-                <div class="col-8 sign-in">
-                    <form>
-                        <h5>Sign In</h5>
-                        <div >
-                          <input type="email" class="form-control inputs" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email address">
+                <h2 class="post">Post your ad</h2>
+            </div>
+            <div class="row">
+                <div class="col-12 add-description">
+                    <form class="">
+                        <div>
+                            <label>Title*</label><br>
+                            <input class="ad-inputs" type="text">
                         </div>
                         <div>
-                          <input type="password" class="form-control inputs" id="exampleInputPassword1" placeholder="Password">
+                            <label>Description* (max 250 characters) </label><br>
+                            <input class="ad-inputs description" type="text">
                         </div>
-                        <div class="col-12 form-check">
-                          <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                          <label class="form-check-label" for="exampleCheck1">Remember Me</label>
+                        <div>
+                            <label>Price*</label><br>
+                            <input class="ad-inputs" type="text">
+                            <input type="radio">Please contact
                         </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
-                      </form>
+                        <div>
+                            <label>City*</label><br>
+                            <input class="ad-inputs" type="text">
+                        </div>
+                        <div>
+                            <label>Contact*</label><br>
+                            <input type="radio">Phone
+                            <input type="radio">Email
+                        </div>
+                        <div>
+                            <label>Phone Number (if contact by phone)</label><br>
+                            <input class="ad-inputs" type="text">
+                        </div>
+                        <div class="mb-3">
+                            <label>Image(s): Max 2MB each</label><br>
+                            <input  type="file">
+                        </div>
+                        <button class="post-ad">
+                            <a href="#">Post Ad</a>
+                        </button>
+                    </form>
+                    
                 </div>
             </div>
         </div>
     </main>
-    
+
 </body>
 </html>
