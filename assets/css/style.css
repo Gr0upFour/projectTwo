@@ -166,8 +166,8 @@ header{
 }
 
 .sign-in{
-   display: flex;
-   justify-content: center;
+    display: flex;
+    justify-content: center;
     margin-top: 50px;
     margin-bottom: 80px;
 }
@@ -178,6 +178,10 @@ header{
     
 }
 
+.register-info{
+    margin-top: 50px;
+
+}
 
 form{
     border: 1px solid grey;
