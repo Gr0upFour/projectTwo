@@ -5,30 +5,18 @@ const { Post, User } = require('../models');
 //Home page route
 router.get('/', (req, res) => {
     console.log(req.session);
-    Post.findAll({
-        attributes: [
-            'id',
-            'product_name',
-            'price',
-            'category',
-            'location',
-            'created_at'
-        ]
-    })
-        .then(dbProductData => {
-            //passes single product object to template
-            //this line may need to be changed depending on how pug files are called
-            const prods = dbProductData.map(product => product.get({ plain: true }));
-            res.render('homepage', {
-                prods,
-                //allow for changing displayed information based on whether user is logged in or not
-                loggedIn: req.session.loggedIn
-            });
-        })
-        .catch(err => {
-            console.log(err);
-            res.status(500).json(err);
-        });
+    res.render('homepage', {
+        id: 1,
+        product_name: 'nVidia RTX 3080',
+        descrip: 'Brand new nVidia graphics card, still in box and sealed. Comes with receipt',
+        price: 850,
+        category: 'Electronics',
+        location: 'Toronto',
+        created_at: new Date(),
+        user: {
+            username: 'tony'
+        }
+    });
 });
 
 //Login page route

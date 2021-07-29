@@ -42,7 +42,7 @@ router.post('/', (req, res) => {
         password: req.body.password
     })
         .then(dbUserData => {
-            req.session.saved(() => {
+            req.session.save(() => {
                 req.session.user_id = dbUserData.id;
                 req.session.username = dbUserData.username;
                 req.session.loggedIn = true;
@@ -69,11 +69,13 @@ router.post('/login', (req, res) => {
 
         //verify user password
         const validPassword = dbUserData.checkPassword(req.body.password);
+        console.log(req.body.password);
+        console.log(validPassword);
         if (!validPassword) {
             res.status(400).json({ message: 'Incorrect password entered' });
             return;
         }
-        req.session.saved(() => {
+        req.session.save(() => {
             req.session.user_id = dbUserData.id;
             req.session.username = dbUserData.username;
             req.session.loggedIn = true;
