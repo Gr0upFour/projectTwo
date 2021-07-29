@@ -49,7 +49,7 @@ router.get('/:id', (req, res) => {
 });
 
 //POST a new product listing
-router.post('/', withAuth, (req, res) => {
+router.post('/', (req, res) => {
     Product.create({
         product_name: req.body.product_name,
         descrip: req.body.descrip,
