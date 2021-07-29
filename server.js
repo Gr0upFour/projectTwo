@@ -9,9 +9,9 @@ const helpers = require('./utils/helpers');
 const exphbs = require('express-handlebars');
 const hbs = exphbs.create({ helpers });
 
-//install pug templating engine
-const pug = require('pug');
-//const compiledFunction = pug.compileFile('template.pug');
+//install pug templating engine, upon inspection express does not require pug to be declared like this.
+//const pug = require('pug');
+//const compiledFunction = pug.compileFile('home-page.pug');
 //initialize pug usage somehow based on online documentation 'https://pugjs.org/api/getting-started.html'
 //make sure to include the helpers utility
 
@@ -37,8 +37,8 @@ app.use(session(sess));
 app.use(routes);
 
 //replace this when/if we find a different templating engine
-app.engine('handlebars', hbs.engine);
-app.set('view engine', 'handlebars');
+//app.engine('handlebars', hbs.engine);
+app.set('view engine', 'pug');
 
 sequelize.sync({ force: false }).then(() => {
     app.listen(PORT, () => console.log(`Now listening on port ${PORT}`));

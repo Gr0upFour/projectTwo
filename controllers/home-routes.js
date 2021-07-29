@@ -4,32 +4,33 @@ const { User, Product } = require('../models');
 
 //Home page route
 router.get('/', (req, res) => {
-    console.log(req.session);
-    Product.findAll({
-        attributes: [
-            'id',
-            'product_name',
-            'descrip',
-            'price',
-            'category',
-            'location',
-            'created_at'
-        ],
-        include: [
-            {
-                model: User,
-                attributes: ['username']
-            }
-        ]
-    })
-        .then(dbPostData => {
-            const prods = dbPostData.map(product => product.get({ plain: true }));
-            res.render('homepage', { prods });
-        })
-        .catch(err => {
-            console.log(err);
-            res.status(500).json(err);
-        });
+    res.render('home-page');
+    // console.log(req.session);
+    // Product.findAll({
+    //     attributes: [
+    //         'id',
+    //         'product_name',
+    //         'descrip',
+    //         'price',
+    //         'category',
+    //         'location',
+    //         'created_at'
+    //     ],
+    //     include: [
+    //         {
+    //             model: User,
+    //             attributes: ['username']
+    //         }
+    //     ]
+    // })
+    //     .then(dbPostData => {
+    //         const prods = dbPostData.map(product => product.get({ plain: true }));
+    //         res.render('homepage', { prods });
+    //     })
+    //     .catch(err => {
+    //         console.log(err);
+    //         res.status(500).json(err);
+    //     });
 });
 
 //Login page route
