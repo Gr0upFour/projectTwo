@@ -4,7 +4,7 @@ const { User, Product } = require('../models');
 
 //Home page route
 router.get('/', (req, res) => {
-    res.render('home-page');
+    res.render('home-page', {"Product" : Product});
     // console.log(req.session);
     // Product.findAll({
     //     attributes: [
@@ -34,12 +34,12 @@ router.get('/', (req, res) => {
 });
 
 //Login page route
-router.get('/login', (req, res) => {
+router.get('/sign-in', (req, res) => {
     if (req.session.loggedIn) {
         res.redirect('/');
         return;
     }
-    res.render('login');
+    res.render('sign-in');
 });
 
 router.post('/logout', (req, res) => {
