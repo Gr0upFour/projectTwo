@@ -11,14 +11,14 @@ const hbs = exphbs.create({ helpers });
 
 //install pug templating engine
 const pug = require('pug');
-const compiledFunction = pug.compileFile('template.pug');
+// const compiledFunction = pug.compileFile('home-page.pug');
 //initialize pug usage somehow based on online documentation 'https://pugjs.org/api/getting-started.html'
 //make sure to include the helpers utility
 
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-const SequelizeStore = require('connect-session=sequelize')(session.Store);
+const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 const sess = {
     secret: 'Ultra secret',
