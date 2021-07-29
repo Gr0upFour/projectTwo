@@ -1,22 +1,35 @@
 const router = require('express').Router();
 const sequelize = require('../config/connection');
-const { Post, User } = require('../models');
+const { User, Product } = require('../models');
 
 //Home page route
 router.get('/', (req, res) => {
     console.log(req.session);
-    res.render('homepage', {
-        id: 1,
-        product_name: 'nVidia RTX 3080',
-        descrip: 'Brand new nVidia graphics card, still in box and sealed. Comes with receipt',
-        price: 850,
-        category: 'Electronics',
-        location: 'Toronto',
-        created_at: new Date(),
-        user: {
-            username: 'tony'
-        }
-    });
+    Product.findAll({
+        attributes: [
+            'id',
+            'product_name',
+            'descrip',
+            'price',
+            'category',
+            'location',
+            'created_at'
+        ],
+        include: [
+            {
+                model: User,
+                attributes: ['username']
+            }
+        ]
+    })
+        .then(dbPostData => {
+            const prods = dbPostData.map(product => product.get({ plain: true }));
+            res.render('homepage', { prods });
+        })
+        .catch(err => {
+            console.log(err);
+            res.status(500).json(err);
+        });
 });
 
 //Login page route
@@ -41,7 +54,7 @@ router.post('/logout', (req, res) => {
 
 //Single Product page route
 router.get('/products/:id', (req, res) => {
-    Post.findOne({
+    Product.findOne({
         where: {
             id: req.params.id
         },
