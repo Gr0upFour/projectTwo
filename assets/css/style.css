@@ -22,7 +22,7 @@ header{
 }
 
 .search-box{
-    margin-top:20px;
+    margin-top:26px;
     background-color: #fec008;
     padding-left: 20px;
     padding-top: 5px;
@@ -35,16 +35,16 @@ header{
 }
 
 .mag-glass{
-    width:30px;
+    width: 17px;
     position: relative;
-    bottom:32px;
-    left:360px;
+    bottom: 2px;
+    left: -29px;
 }
 
 .link-item{
     margin-top: 20px;
     margin-right: 20px;
-    margin-left: 30px;
+    margin-left: 20px;
     padding:5px;
     /* border: 2px solid #465a64; */
     border: none;
@@ -68,15 +68,21 @@ header{
     /* margin-right: 50px;
     padding-top: 10px; */
     font-size: 20px;
+    padding: 12px;
 }
 
 .link-item a:hover{
     color: #465a64;
 }
 
+.row.nav-bar {
+    margin-left: 0;
+    margin-right: 0;
+    --bs-gutter-x: 0px;
+}
 .nav-bar{
     background-color: #fec008;
-    
+    margin-bottom: 30px;
 }
 
 .handles-1{
@@ -98,13 +104,20 @@ header{
     border-right: 2px solid #465a64;
 }
 
-.handles-1:hover,.handles-2:hover,.handles-3:hover,.handles-4:hover{
+/* .handles-1:hover,.handles-2:hover,.handles-3:hover,.handles-4:hover{
     background-color: #465a64;
-    
-}
-
-.handles-1 a:hover,.handles-2 a:hover,.handles-3 a:hover,.handles-4 a:hover{
     color: #fec008;
+} */
+.handles-1 a,.handles-2 a,.handles-3 a,.handles-4 a{
+    transition: .5s ease-out;
+}
+.handles-1 a:hover,.handles-2 a:hover,.handles-3 a:hover,.handles-4 a:hover{
+    /* color: #fec008; */
+    font-size: 17px;
+    transition: .5s ease-in;
+}
+.nav-bar ul{
+    padding: 0;
 }
 .nav-item{
     list-style: none;
@@ -132,7 +145,7 @@ header{
 }
 
 .btn{
-    background-color: grey;
+    background-color: #465a64;
     color:#fec008;
     border-radius: 8px;
     border: none; 
@@ -141,7 +154,7 @@ header{
 
 .btn:hover{
     background-color: #fec008;
-    color:grey;
+    color:#465a64;
     font-weight: bolder;
 }
 
@@ -168,12 +181,13 @@ header{
 .sign-in{
     display: flex;
     justify-content: center;
-    margin-top: 50px;
     margin-bottom: 80px;
 }
-
+form.registration, .sign-in form{
+    width: 100%;
+}
 .registration{
- margin-top: 50px;
+ margin-top: 60px;
  padding-right: 30px;
     
 }
@@ -206,9 +220,12 @@ a{
     text-decoration: none;
     color:#fec008;
 }
-
+a:hover {
+    color: #465a64;
+}
 .post{
     color: #465a64;
+    text-align: center;
 }
 
 .add-description{
@@ -308,4 +325,9 @@ form {
     height: 100%;
     width: 80px;
     border-bottom-left-radius: 70px;
+}
+img.reviewImage{
+    height: 60px;
+    width: 66px;
+    display: inline-block;
 }
