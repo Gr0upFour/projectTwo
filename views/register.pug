@@ -16,17 +16,17 @@ header
     .row
       .col-4
         a(href='home-page.html')
-          img.logo(src='assets/css/images/logo.png' alt='logo')
+          img.logo(src='stylesheets/images/logo.png' alt='logo')
       .col-4
         input.search-box(type='text' placeholder='Search')
         a(href='#')
-          img.mag-glass(src='assets/css/images/mag-glass.png')
+         img.mag-glass(src='stylesheets/images/mag-glass.png')
       .col-4
         button.link-item
           a(href='sign-in.html') Log In
         h7 or
         button.link-item
-          | Register
+        a(href='/register') Register
     .row.nav-bar
       .col-1
       .col-2.handles-1
@@ -70,5 +70,5 @@ main
           p Sign in to post, edit and manage ads.
           br
           button.btn(type='submit')
-            a(href='sign-in.html')
+            a(href='/signin')
               | Sign In
