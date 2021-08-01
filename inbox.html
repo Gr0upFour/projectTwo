@@ -11,10 +11,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+SC:wght@500&family=Teko:wght@300&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>Window Shopper</title>
+    <title>Inbox - Window Shopper</title>
 </head>
 <body>
-    <header >
+    <header>
         <nav>
             <div class="row">
                 <div class="col-4">
@@ -31,11 +31,11 @@
                 </div>
                 <div class="col-4 ">
                    <button class="link-item">
-                       <a href="sign-in.html">Log In</a>
+                       <a href="#">Inbox</a>
                    </button>
-                   <h7>or</h7>
+                   
                    <button class="link-item">
-                       <a href="register.html">Register</a>
+                       <a href="#">Logout</a>
                    </button>
                 </div>
             </div>
@@ -69,63 +69,47 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col-2"></div>
+      <div class="col-2"></div>
 
-                <!-- <div class="col-2">
-                    <input class= "search" placeholder="Search Me"></input>
-                </div> -->
             </div>
         </nav>
     </header>
-    <main>
-        <div class="container selectProduct">
-            <div class="row">
-                <div class="col-9">
-                    <div class="row">
-                        <div class="col-6">
-                            <h2 id="productName" class="product-name">Product Name</h2>
-                            <div class="card">
-                                <img src="assets/css/images/placeholder-image.png" class="card-img-top" alt="...">
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <p id="product-detail" class="product-detail">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit, 
-                                autem amet dolores rem nesciunt corporis, temporibus culpa 
-                                aliquid non asperiores porro iste excepturi! Maiores quas impedit culpa 
-                                consequatur doloribus natus!</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="card seller-detail">
-                        <div class="userimage">
-                            <img src="assets/css/images/user.png" alt="">
-                        </div>
-                        <h3 id="sellerName" class="seller-name">Seller Name</h3>
-                        <div class="reviews">
-                            <div>
-                                <img src="assets/css/images/rating.png" class="reviewImage" alt="">
-                            </div>
-                            <span><b>10</b> Reviews</span>
-                        </div>
-                        <div class="listing">
-                            <a href="#">View Listing</a>
-                        </div>
-                    </div>
-                </div>
 
+    <main>
+        <div class="container">
+            <div class="row">
+                <h2 class="post">My Inbox</h2>
             </div>
-            <div class="send-message">
-                <form action="">
-                    <div class="input-group">
-                        <input id="message" type="text" class="form-control" name="" placeholder="Your Message">
-                        <span class="input-group-addon">
-                            <button type="button" class="btn btn-primary">
-                                <span class="glyphicon glyphicon-bookmark"></span> Send
-                            </button>
-                        </span>
-                      </div>
-                </form>
+        </div>
+        <div class="container inbox">
+            <div class="row">
+                <div class="col-4 messages-box ">
+                    <div class="row message-center">A</div>
+                    <div class="row message-center">B</div>
+                    <div class="row message-center">C</div>
+                </div>
+                <div class="col-8">
+                    <div class="row message-header">
+                        <a href="select-product.html">
+                            <h3>User Name - Product Name</h3>
+                        </a>
+                    </div>
+                    <div class="row">
+                        messages comes here.. 
+                    </div>
+                    <div class="row send-message message-input">
+                        <form action="">
+                            <div class="input-group">
+                                <input id="message" type="text" class="form-control" name="" placeholder="Your Message">
+                                <span class="input-group-addon">
+                                    <button type="button" class="btn btn-primary">
+                                        <span class="glyphicon glyphicon-bookmark"></span> Send
+                                    </button>
+                                </span>
+                              </div>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
