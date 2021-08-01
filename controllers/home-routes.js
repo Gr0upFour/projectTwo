@@ -39,7 +39,20 @@ router.get('/login', (req, res) => {
         res.redirect('/');
         return;
     }
-    res.render('login');
+   
+    res.render('sign-in');
+    
+});
+
+//Register page route
+router.get('/register', (req, res) => {
+    if (req.session.loggedIn) {
+        res.redirect('/');
+        return;
+    }
+   
+    res.render('register');
+    
 });
 
 router.post('/logout', (req, res) => {
@@ -52,6 +65,7 @@ router.post('/logout', (req, res) => {
         res.status(404).end();
     }
 });
+
 
 //Single Product page route
 router.get('/products/:id', (req, res) => {

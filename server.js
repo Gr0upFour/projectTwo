@@ -39,6 +39,7 @@ app.use(routes);
 //replace this when/if we find a different templating engine
 //app.engine('handlebars', hbs.engine);
 app.set('view engine', 'pug');
+app.set('views', path.join(__dirname,'views'))
 
 sequelize.sync({ force: false }).then(() => {
     app.listen(PORT, () => console.log(`Now listening on port ${PORT}`));
