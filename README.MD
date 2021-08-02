@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Window Shopper
 ## Description
 E-commerce website that allows visitors to view items for sale
@@ -28,3 +29,6 @@ no guidelines at this time.
 If you have any questions about the repo, please [open an issue](https://github.com/Gr0upFour/projectTwo/issues).
 ## Credits
 - [u of t](http://courses.bootcampspot.com/)
+=======
+
+>>>>>>> 33a260fcb1b3f86bf53762bb5554e3017787fb21
