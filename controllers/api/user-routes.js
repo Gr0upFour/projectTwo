@@ -57,11 +57,13 @@ router.post('/', (req, res) => {
 
 //POST /api/users/login
 router.post('/login', (req, res) => {
+    console.log(' user routes req body : ', req.body)
     User.findOne({
         where: {
             email: req.body.email
         }
     }).then(dbUserData => {
+        console.log('dbuserdata =>', dbUserData)
         if (!dbUserData) {
             res.status(400).json({ message: 'No user exists with that email address.' });
             return;

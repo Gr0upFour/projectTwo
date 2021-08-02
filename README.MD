@@ -54,4 +54,3 @@ If you have any questions about the repo, please [open an issue](https://github.
 
 ## Credits
 * [UofT Bootcamp](https://courses.bootcampspot.com/courses/)
-
