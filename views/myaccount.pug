@@ -1,0 +1,97 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(rel='shortcut icon' href='stylesheets/images/favicon.png')
+  link(href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC' crossorigin='anonymous')
+  link(rel='preconnect' href='https://fonts.googleapis.com')
+  link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+  link(href='https://fonts.googleapis.com/css2?family=Encode+Sans+SC:wght@500&family=Teko:wght@300&display=swap' rel='stylesheet')
+  link(rel='preconnect' href='https://fonts.googleapis.com')
+  link(rel='stylesheet' href='stylesheets/style.css')
+  title Window Shopper
+header
+  nav
+    .row
+      .col-4
+        a(href='/')
+          img.logo(src='stylesheets/images/logo.png' alt='logo')
+      .col-4
+        input.search-box(type='text' placeholder='Search')
+        a(href='#')
+          img.mag-glass(src='stylesheets/images/mag-glass.png')
+      .col-4
+        button.link-item
+        //-   Add the link for the Inbox
+        a(href='#') My Inbox
+        h7 or
+        button.link-item
+          a(href='/home-page') Logout
+       
+    .row.nav-bar
+      .col-1
+      .col-2.handles-1
+        ul
+          li.nav-item
+            a(href='#') All Categories
+      .col-2.handles-2
+        ul
+          li.nav-item
+            a(href='#') Featured
+      .col-2.handles-3
+        ul
+          li.nav-item
+            a(href='#') Electronics
+      .col-2.handles-4
+        ul
+          li.nav-item
+            a(href='#') Furniture
+      
+main
+  .container
+    .row
+      .col-4
+        .card(style='width: 18rem;')
+          h5.card-title Today&apos;s Deals
+          img.card-img-top(src='stylesheets/images/products/iphone_case.jpg' alt='...')
+          .card-body
+            p.card-text
+              | MILPROX Case Compatible for iPhone 12 Case and iPhone 12 Pro Silicone Cases with Screen Protector, Microfiber Cloth Lining Silicone Gel Shell-Lavender Gray
+            a.btn(href='#') View Listing
+      .col-4
+        .card(style='width: 18rem;')
+          h5.card-title Near You
+          img.card-img-top(src='stylesheets/images/products/Exercise Bike.jpg' alt='...')
+          .card-body
+            p.card-text
+              | Exercise Bike, Indoor Cycling Bike with FTP Power Training, Auto Resistance Stationary Bike, Scenic Riding for Home Workout with Tablet
+            a.btn(href='#') View Listing
+      .col-4
+        .card(style='width: 18rem;')
+          h5.card-title Popular on Web
+          img.card-img-top(src='stylesheets/images/products/Water bottle.jpg' alt='...')
+          .card-body
+            p.card-text
+              | ETDW Gallon Water Bottle with Straw and Time Marker, 128OZ/74OZ BPA Free Huge Water Jug with Handle, Leak-proof Pop Up Water Container
+            a.btn(href='#') View Listing
+  .container
+    .row
+      .col-12.trends
+        h3 Inspired by your shopping trends...
+    .row
+      .col-2.trend-items
+        a(href='#')
+          img.img-trend(src='stylesheets/images/products/HDMI cable.jpg')
+      .col-2.trend-items
+        a(href='#')
+          img.img-trend(src='stylesheets/images/products/Monitor.jpg')
+      .col-2.trend-items
+        a(href='#')
+          img.img-trend(src='stylesheets/images/products/Speaker.jpg')
+      .col-2.trend-items
+        a(href='#')
+          img.img-trend(src='stylesheets/images/products/Table.jpg')
+      .col-2.trend-items
+        a(href='#')
+          img.img-trend(src='stylesheets/images/products/Office chair.jpg')

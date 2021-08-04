@@ -1,0 +1,30 @@
+INSERT INTO user (username, email, pwd)
+VALUES
+    ('nemo', 'wjy16888888@gmail.com', '12345'),
+    ('kruti', 'kruti.patel0709@gmail.com', '12345'),
+    ('nayan', 'nsidh068@uottawa.ca', '12345'),
+    ('sarah', 'sarahazzopardi17@hotmail.com', '12345'),
+    ('tony', 'tonyhuang107@gmail.com', '12345');
+
+INSERT INTO product (product_name, descrip, price, category, location, created_by)
+VALUES
+    ('nVidia RTX 3080', 'Brand new nVidia graphics card, still in box and sealed. Comes with receipt', 850, 'Electronics', 'Toronto', 5),
+    ('Apple iPhone 12 Pro Max 512GB', 'Latest Apple smartphone with all the bells and whistles. Available in black, gold, and white,', 1700, 'Electronics', 'Vancouver', 2),
+    ('Nike Flyknit %Next', 'Great long distance running shoe from Nike. Super light and stable feeling while looking great. Comes in black or red.', 280, 'Clothing', 'Toronto', 1),
+    ('Cast Iron Frying Pan 10"', 'The best cooking experience for all experienced and aspirational chefs. Even heat distribution and long lasting build.', 40, 'Household Goods', 'Halifax', 3), 
+    ('Leather Messenger Bag', 'Messenger bag made with high quality leather and durable metal clasp lock. Has enough room for most thin-and-light laptops/MacBooks or an iPad Pro. Convenient pockets underneath front flap for storing loose items.', 30, 'Bags', 'Vancouver', 5),
+    ('LED Vanity Mirror', 'Vanity mirror for all sizes of bathrooms with a built-in LED band around the outside edge to improve visibility and convenience. Anti-fog function controlled from toggle switch located on side of mirror housing.', 25, 'Bathroom', 'Los Angeles', 4),
+    ('2017 Audi RS3', 'Lightly used, well maintained Audi RS3. Comes with extra set of winter tires and wheels. Regularly maintained according to manual schedule with licensed mechanics. Only 75k km mileage.', 50000, 'Automobiles', 'Oakville', 2),
+    ('2008 BMW E92 M3', 'Selling a well maintained BMW M3. No modifications, all components are stock and comes with extra set of winter tires and wheels. Only generation available with the V8 and it was all the better for it. Clear wrapped PPF on entire car with 30% ceramic tint all windows.', 40000, 'Automobiles', 'Markham', 1),
+    ('Oscillating Tower Fan', 'Slim and quiet tower fan for small to medium sized rooms. 3 adjustable speeds with oscillation function. Comes with detachable remote control.', 30, 'Household Goods', 'Toronto', 3),
+    ('Bose SoundLink Resolve+', 'Bluetooth wireless speaker with large sound in a compact body. Built with high quality alumnimum and precision drilled speaker grille. Large battery for long jam sessions.', 429.99, 'Electronics', 'Markham', 5),
+    ('14k Rose Gold Half-Moon Earrings', 'Elegant earrings made with 99% pure 14k rose gold. Durable and resilient for daily wear. Simple but sophisticated design garners admiration without calling attention to itself.', 159.99, 'Jewellery', 'Toronto', 2),
+    ('Memory Foam Lumar Support Pillow','Comfortable lumar pillow, supports healthy posture habits while the top layer cooling gel allows extended seating time with minimal discomfort.', 15, 'Health', 'Barrie', 3),
+    ('Apple AirPods Pro', 'Truly wireless earbuds designed by Apple. Built-in active noise cancellation (ANC) to better isolate the listening experience from ambient noise, easily temporarily disabled with a touch of either stalk. Long battery life with mulple recharges from the charging case.', 330, 'Electronics', 'London', 1),
+    ('Shiseido Ultra Sun Protector Cream SPF 50', 'Designed for peak sun protection, this Broad Spectrum SPF 50+ facial sunscreen cream creates a protective veil that’s strengthened by heat and water. A lightweight, moisturizing formula for continuous coverage without a greasy feel.', 52, 'Health', 'Tokyo', 4),
+    ('Nintendo Switch (OLED Model)', 'Play at home on the TV or on-the-go with a vibrant 7-inch OLED screen with the Nintendo Switch (OLED model). In addition to the screen with vivid colors and sharp contrast, the Nintendo Switch (OLED model) includes a wide adjustable stand, a dock with a wired LAN port for TV play, 64 GB of internal storage, and enhanced audio.', 350, 'Electronics', 'Toronto', 5),
+    ('XBox Series X', 'Get your hands on a gaming powerhouse with the Xbox Series X console. It pairs a custom 1TB SSD and 12 teraflops of graphics processing power for stunningly fast gameplay and reduced load times. Enjoy 4K gaming at up to 120fps, advanced 3D spatial sound, and more for an incredible experience. Plus, it supports thousands of titles across 4 generations of Xbox consoles.', 600, 'Electronics', 'Redmond', 3),
+    ('PlayStation 5', 'Unleash new gaming possibilities beyond your wildest imagination with the PlayStation 5 console. Get lightning-fast loading times on the PS5 with an ultra-high speed SSD, deeper immersion with support for haptic feedback, adaptive triggers, 3D Audio, 4K and 8K output, and an all-new generation of incredible PlayStation games.', 630, 'Electronics', 'Oakville', 2),
+    ('Samsung 980 Pro 1TB PCIe NVME 4.0 M.2 SSD', 'Unleash the power of the Samsung 980 PRO PCIe 4.0 NVMe SSD for next-level computing. 980 PRO delivers 2x the data transfer rate of PCIe 3.0, while maintaining compatibility with PCIe 3.0.', 310, 'Electronics', 'Markham', 1),
+    ('AMD Ryzen 9 5950X', 'The best processor for gamers meets the best processor for creators, with 16 cores and 32 processing threads. 4.9 GHz Max Boost, unlocked for overclocking, 72 MB of cache, DDR-3200 support.', 1000, 'Electronics', 'Taipei', 4),
+    ('Razer BlackWidow V3 Pro', 'The world’s first and most iconic mechanical gaming keyboard makes its next game-changing evolution. Enter a new wireless meta with the Razer BlackWidow V3 Pro—with 3 modes of connection for unrivalled versatility, and a satisfying gaming experience comprised of best-in-class switches and full-height keys.', 300, 'Electronics', 'Waterloo', 5);n
