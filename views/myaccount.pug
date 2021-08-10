@@ -23,19 +23,12 @@ header
           img.mag-glass(src='stylesheets/images/mag-glass.png')
       .col-4
         button.link-item
-          a(href='/login') Log In
+        //-   Add the link for the Inbox
+        a(href='#') My Inbox
         h7 or
         button.link-item
-          a(href='/register') Register
-        //
-          <ul>
-          <li class="link-item">
-          <a href="sign-in.pug">Sign In</a>
-          </li>
-          <li class="link-item">
-          <a href="#">Create Account</a>
-          </li>
-          </ul>
+          a(href='/home-page') Logout
+       
     .row.nav-bar
       .col-1
       .col-2.handles-1
@@ -54,21 +47,18 @@ header
         ul
           li.nav-item
             a(href='#') Furniture
-      //
-        <div class="col-2">
-        <input class= "search" placeholder="Search Me"></input>
-        </div>
+      
 main
   .container
     .row
       .col-4
         .card(style='width: 18rem;')
           h5.card-title Today&apos;s Deals
-          img.card-img-top(src='stylesheets/images/products/iphone_case.jpg' alt='...')// give id
+          img.card-img-top(src='stylesheets/images/products/iphone_case.jpg' alt='...')
           .card-body
             p.card-text
               | MILPROX Case Compatible for iPhone 12 Case and iPhone 12 Pro Silicone Cases with Screen Protector, Microfiber Cloth Lining Silicone Gel Shell-Lavender Gray
-            a.btn(href='/products/1') View Listing
+            a.btn(href='#') View Listing
       .col-4
         .card(style='width: 18rem;')
           h5.card-title Near You
@@ -90,7 +80,6 @@ main
       .col-12.trends
         h3 Inspired by your shopping trends...
     .row
-      
       .col-2.trend-items
         a(href='#')
           img.img-trend(src='stylesheets/images/products/HDMI cable.jpg')

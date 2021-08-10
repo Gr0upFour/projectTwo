@@ -144,7 +144,7 @@ header {
 
 .card {
     margin-top: 20px;
-    border: 2px solid grey;
+    border: none;
     border-radius: 8%;
 }
 
@@ -176,7 +176,9 @@ header {
 .trend-items {
     display: flex;
     justify-content: center;
-    border: 1px solid black;
+    padding-left: 60px;
+    padding-top: 20px;
+    margin-right: 30px;
     margin-bottom: 20px;
 }
 
@@ -353,4 +355,33 @@ img.reviewImage {
     height: 60px;
     width: 66px;
     display: inline-block;
+}
+
+.inbox{
+    border: 1px solid grey;
+    border-radius: 12px 12px;
+}
+.messages-box{
+    border-right: 2px solid black;
+}
+.message-center{
+    background-color: rgb(179, 178, 178);
+    border-radius: 12px 12px;
+    margin-bottom: 10px;
+    padding: 25px 5px; 
+    display: flex;
+}
+.message-header{
+    background-color: rgb(179, 178, 178) ;
+    border-radius: 0 8px;
+}
+.message-input{
+    margin-top:120px; 
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+.card-img-top{
+    width:200px;
+    height: 230px;
+
 }

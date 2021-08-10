@@ -9,24 +9,24 @@ head
   link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
   link(href='https://fonts.googleapis.com/css2?family=Encode+Sans+SC:wght@500&family=Teko:wght@300&display=swap' rel='stylesheet')
   link(rel='preconnect' href='https://fonts.googleapis.com')
-  link(rel='stylesheet' href='assets/css/style.css')
+  link(rel='stylesheet' href='stylesheets/style.css')
   title Register - Window Shopper
 header
   nav
     .row
       .col-4
-        a(href='home-page.html')
-          img.logo(src='assets/css/images/logo.png' alt='logo')
+        a(href='/')
+          img.logo(src='stylesheets/images/logo.png' alt='logo')
       .col-4
         input.search-box(type='text' placeholder='Search')
         a(href='#')
-          img.mag-glass(src='assets/css/images/mag-glass.png')
-      .col-4
-        button.link-item
-          a(href='sign-in.html') Log In
-        h7 or
-        button.link-item
-          | Register
+         img.mag-glass(src='stylesheets/images/mag-glass.png')
+      //- .col-4
+      //-   button.link-item
+      //-     a(href='sign-in.html') Log In
+      //-   h7 or
+      //-   button.link-item
+      //-   a(href='/register') Register
     .row.nav-bar
       .col-1
       .col-2.handles-1
@@ -70,5 +70,5 @@ main
           p Sign in to post, edit and manage ads.
           br
           button.btn(type='submit')
-            a(href='sign-in.html')
+            a(href='/login')
               | Sign In

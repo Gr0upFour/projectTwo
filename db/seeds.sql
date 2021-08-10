@@ -1,4 +1,4 @@
-INSERT INTO users (username, email, pwd)
+INSERT INTO user (username, email, pwd)
 VALUES
     ('nemo', 'wjy16888888@gmail.com', '12345'),
     ('kruti', 'kruti.patel0709@gmail.com', '12345'),
@@ -6,7 +6,7 @@ VALUES
     ('sarah', 'sarahazzopardi17@hotmail.com', '12345'),
     ('tony', 'tonyhuang107@gmail.com', '12345');
 
-INSERT INTO products (product_name, descrip, price, category, loc, created_by)
+INSERT INTO product (product_name, descrip, price, category, location, created_by)
 VALUES
     ('nVidia RTX 3080', 'Brand new nVidia graphics card, still in box and sealed. Comes with receipt', 850, 'Electronics', 'Toronto', 5),
     ('Apple iPhone 12 Pro Max 512GB', 'Latest Apple smartphone with all the bells and whistles. Available in black, gold, and white,', 1700, 'Electronics', 'Vancouver', 2),
@@ -27,4 +27,4 @@ VALUES
     ('PlayStation 5', 'Unleash new gaming possibilities beyond your wildest imagination with the PlayStation 5 console. Get lightning-fast loading times on the PS5 with an ultra-high speed SSD, deeper immersion with support for haptic feedback, adaptive triggers, 3D Audio, 4K and 8K output, and an all-new generation of incredible PlayStation games.', 630, 'Electronics', 'Oakville', 2),
     ('Samsung 980 Pro 1TB PCIe NVME 4.0 M.2 SSD', 'Unleash the power of the Samsung 980 PRO PCIe 4.0 NVMe SSD for next-level computing. 980 PRO delivers 2x the data transfer rate of PCIe 3.0, while maintaining compatibility with PCIe 3.0.', 310, 'Electronics', 'Markham', 1),
     ('AMD Ryzen 9 5950X', 'The best processor for gamers meets the best processor for creators, with 16 cores and 32 processing threads. 4.9 GHz Max Boost, unlocked for overclocking, 72 MB of cache, DDR-3200 support.', 1000, 'Electronics', 'Taipei', 4),
-    ('Razer BlackWidow V3 Pro', 'The world’s first and most iconic mechanical gaming keyboard makes its next game-changing evolution. Enter a new wireless meta with the Razer BlackWidow V3 Pro—with 3 modes of connection for unrivalled versatility, and a satisfying gaming experience comprised of best-in-class switches and full-height keys.', 300, 'Electronics', 'Waterloo', 5);
+    ('Razer BlackWidow V3 Pro', 'The world’s first and most iconic mechanical gaming keyboard makes its next game-changing evolution. Enter a new wireless meta with the Razer BlackWidow V3 Pro—with 3 modes of connection for unrivalled versatility, and a satisfying gaming experience comprised of best-in-class switches and full-height keys.', 300, 'Electronics', 'Waterloo', 5);n

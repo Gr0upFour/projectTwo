@@ -15,18 +15,18 @@ header
   nav
     .row
       .col-4
-        a(href='home-page.html')
+        a(href='/')
           img.logo(src='stylesheets/images/logo.png' alt='logo')
       .col-4
         input.search-box(type='text' placeholder='Search')
         a(href='#')
           img.mag-glass(src='stylesheets/images/mag-glass.png')
-      .col-4
-        button.link-item
-          a(href='sign-in.html') Log In
-        h7 or
-        button.link-item
-          a(href='register.html') Register
+      //- .col-4
+      //-   button.link-item
+      //-     a(href='/login') Log In
+      //-   h7 or
+      //-   button.link-item
+      //-     a(href='/register') Register
     .row.nav-bar
       .col-1
       .col-2.handles-1
@@ -49,23 +49,24 @@ main
   .container
     .row
       .col-4
-        form.registration
+        form.signup-form
           h5 Not Registered Yet?
           p Register now to post, edit and manage ads. It&apos;s quick, easy and free!
           button.btn(type='submit')
-            a(href='register.html')
+            a(href='/register')
               | Register Now
       .col-8.sign-in
-        form
+        form.login-form
           h5 Sign In
           div
-            input#exampleInputEmail1.form-control.inputs(type='email' aria-describedby='emailHelp' placeholder='Email address')
+            input#email-login.form-control.inputs(type='email' aria-describedby='emailHelp' placeholder='Email address')
           div
-            input#exampleInputPassword1.form-control.inputs(type='password' placeholder='Password')
+            input#password-login.form-control.inputs(type='password' placeholder='Password')
           .col-12.form-check
             input#exampleCheck1.form-check-input(type='checkbox')
             label.form-check-label(for='exampleCheck1') Remember Me
           button.btn.btn-primary(type='submit') Submit
+          script(src='./javascript/login.js')
 
 
 
